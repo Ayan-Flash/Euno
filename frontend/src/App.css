@@ -8,7 +8,7 @@
 
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  background: #000000;
+  background: transparent;
   color: #ffffff;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
@@ -18,7 +18,7 @@ body {
 .tenz-container {
   position: relative;
   min-height: 100vh;
-  background: #000000;
+  background: transparent;
 }
 
 /* Diagonal Glowing Line */
@@ -28,15 +28,13 @@ body {
   right: 0;
   width: 2px;
   height: 141.42%;
-  background: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0.8),
-    rgba(255, 255, 255, 0.4),
-    rgba(255, 255, 255, 0.8)
-  );
+  background: linear-gradient(to bottom,
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0.8));
   transform-origin: top right;
   transform: rotate(-45deg);
-  box-shadow: 
+  box-shadow:
     0 0 10px rgba(255, 255, 255, 0.6),
     0 0 20px rgba(255, 255, 255, 0.4),
     0 0 30px rgba(255, 255, 255, 0.2);
@@ -46,16 +44,19 @@ body {
 }
 
 @keyframes pulse-line {
-  0%, 100% {
+
+  0%,
+  100% {
     opacity: 0.8;
-    box-shadow: 
+    box-shadow:
       0 0 10px rgba(255, 255, 255, 0.6),
       0 0 20px rgba(255, 255, 255, 0.4),
       0 0 30px rgba(255, 255, 255, 0.2);
   }
+
   50% {
     opacity: 1;
-    box-shadow: 
+    box-shadow:
       0 0 15px rgba(255, 255, 255, 0.8),
       0 0 30px rgba(255, 255, 255, 0.6),
       0 0 45px rgba(255, 255, 255, 0.3);
@@ -82,7 +83,7 @@ body {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background: #000000;
+  background: transparent;
 }
 
 .hero-bg-video {
@@ -92,7 +93,7 @@ body {
   width: 100%;
   height: 100%;
   z-index: 1;
-  background: radial-gradient(ellipse at center, #1a1a1a 0%, #000000 70%);
+  background: transparent;
 }
 
 .hero-gradient-overlay {
@@ -136,10 +137,13 @@ body {
 }
 
 @keyframes pulse {
-  0%, 100% {
+
+  0%,
+  100% {
     opacity: 1;
     transform: scale(1);
   }
+
   50% {
     opacity: 0.5;
     transform: scale(1.2);
@@ -222,10 +226,13 @@ body {
 }
 
 @keyframes scrollDown {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0);
     opacity: 1;
   }
+
   50% {
     transform: translateY(20px);
     opacity: 0.3;
@@ -235,7 +242,8 @@ body {
 /* Bio Section */
 .bio-section {
   padding: 8rem 2rem;
-  background: #000000;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
 }
 
 .bio-container {
@@ -361,7 +369,8 @@ body {
 /* Video Section */
 .video-section {
   padding: 8rem 2rem;
-  background: #0a0a0a;
+  background: rgba(10, 10, 10, 0.4);
+  backdrop-filter: blur(10px);
 }
 
 .video-container-tenz {
@@ -440,7 +449,8 @@ body {
 /* Features Section */
 .features-section-tenz {
   padding: 8rem 2rem;
-  background: #000000;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
 }
 
 .features-container {
@@ -551,7 +561,8 @@ body {
 /* Specs Section */
 .specs-section {
   padding: 8rem 2rem;
-  background: #0a0a0a;
+  background: rgba(10, 10, 10, 0.4);
+  backdrop-filter: blur(10px);
 }
 
 .specs-container {
@@ -654,7 +665,8 @@ body {
 /* Gallery Section */
 .gallery-section {
   padding: 8rem 2rem;
-  background: #000000;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
 }
 
 .gallery-container {
@@ -733,7 +745,8 @@ body {
 /* Technical Specs */
 .tech-specs-section {
   padding: 8rem 2rem;
-  background: #0a0a0a;
+  background: rgba(10, 10, 10, 0.4);
+  backdrop-filter: blur(10px);
 }
 
 .tech-specs-container {
@@ -786,7 +799,8 @@ body {
 /* Contact Section */
 .contact-section-tenz {
   padding: 8rem 2rem;
-  background: #000000;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
 }
 
 .contact-container-tenz {
@@ -971,6 +985,7 @@ body {
 
 /* Responsive Design */
 @media (max-width: 1024px) {
+
   .bio-grid,
   .specs-container,
   .footer-main-tenz {
@@ -984,6 +999,7 @@ body {
 }
 
 @media (max-width: 768px) {
+
   .tenz-hero,
   .bio-section,
   .video-section,
