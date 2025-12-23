@@ -10,7 +10,7 @@ const App = () => {
   const [activeFeature, setActiveFeature] = useState(0);
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [formStatus, setFormStatus] = useState("");
-  
+
   const heroRef = useRef(null);
   const { scrollYProgress } = useScroll();
   const heroOpacity = useTransform(scrollYProgress, [0, 0.3], [1, 0]);
@@ -129,7 +129,14 @@ const App = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setFormStatus("Message sent! We'll be in touch soon.");
+    // TODO: Replace 'your-email@example.com' with your actual email address
+    const recipientEmail = "your-email@example.com";
+    const subject = `Project Inquiry from ${formData.name}`;
+    const body = `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`;
+
+    window.location.href = `mailto:${recipientEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    setFormStatus("Opening your email client...");
     setTimeout(() => setFormStatus(""), 3000);
     setFormData({ name: "", email: "", message: "" });
   };
